@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+span{
+    color:#00E07B;
+}
+
+/*Navbar */
+nav{
+    background:rgba(35,32,32,0.3);
+    height:80px;
+    width:100%;
+    position:fixed;
+}
+
+#logo{
+    color:white;
+    font-size:35px;
+    line-height:80px;
+    padding: 0 100px;
+    font-weight:bold;
+    text-decoration: none;
+}
+
+nav ul{
+    float:right;
+}
+
+nav ul li{
+    display:inline-block;
+    line-height:80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color:white;
+    font-size:17px;
+    text-transform: uppercase;
+    padding:7px 13px;
+    text-decoration: none;
+    margin-right:20px;
+}
+
+.active, #navbtn:hover{
+    color:white;
+    text-decoration: none;
+    border-bottom: 1px solid #00E07B;
+}
+
+.checkbtn{
+    font-size:30px;
+    color:white;
+    float:right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display:none;
+}
+
+#check{
+    display:none;
+}
+
+/*Homepage Section */
+
+#Homepage{
+    width:100%;
+    height:100vh;
+    background: url('../images/nature.jpg') no-repeat center center/cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+#Homepage h1{
+    font-size: 60px;
+}
+
+#Homepage p{
+    font-size:20px;
+}
+
+#Homepage .btn{
+    text-decoration: none;
+    color:white;
+    padding:10px 8px;
+    border:2px solid #00E07B;
+    border-radius: 15%;
+}
+
+.btn:hover{
+    background: rgba(0, 0, 0, 0.301);
+    transform: scale(1.05);
+    transition: all 0.2s;
+}
+
+/*About Section */
+
+#about{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#desc{
+    width:50%;
+    text-align:center;
+    font-family:'Lato', sans-serif;
+}
+
+#desc p{
+    padding:7px 100px;
+    line-height: 32px;
+}
+
+#about img{
+    width:45%;
+    height:50%;
+}
+
+#desc .btn{
+    text-decoration: none;
+    color:black;
+    padding:10px 8px;
+    border:2px solid #00E07B;
+    margin:10px 20px;
+    border-radius: 15%;
+}
+
+/*Services Section*/
+
+#services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width:100%;
+    min-height:100vh;
+    background:rgba(35,32,32);
+    color:white;
+    font-family: 'Lato', sans-serif;
+}
+
+#services h1{
+    margin: 25px;
+}
+
+.servicesaccordian{
+    width:85%;
+    color:rgba(35,32,32);
+
+}
+#services #sbtn{
+    text-decoration: none;
+    color:white;
+    padding:10px 8px;
+    border:2px solid #00E07B;
+    border-radius: 15%;
+    margin-bottom:40px;
+}
+
+#sbtn:hover{
+    background: rgba(0, 0, 0, 0.301);
+    transform: scale(1.05);
+    transition: all 0.2s;
+}
+
+.card-header h2 button{
+    text-decoration: none;
+    color:rgba(35,32,32);
+    font-weight: bold;
+}
+
+.card-header h2 button:hover{
+    background: none;
+    border:none;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+#services h2{
+    padding:14px;
+    font-size:16px;
+}
+
+/*Counsellors Section*/
+#counsellors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    height:100vh;
+    background:white;
+    font-family: 'Lato', sans-serif;
+    color:rgba(35,32,32);
+}
+
+
+@media (max-width:1068px){
+    /*Navbar */
+    #logo{
+        font-size:30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a{
+        font-size:16px;
+    }
+
+    .checkbtn{
+        display:block;
+    }
+
+    ul{
+        position:fixed;
+        width:100%;
+        height:100vh;
+        background: rgba(13,148,58);
+        top:80px;
+        left:-100%;
+        text-align:center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display:block;
+        margin:50px 0;
+        line-height: 30px;
+    }
+
+    #navbtn{
+        font-size:20px;
+        color:white;
+    }
+
+    .active, #navbtn:hover{
+        color: white;
+        border-bottom: 1px solid #00E07B;
+    }
+
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+@media (max-width:1040px){
+    #desc{
+        width:100%;
+        height:100%;
+        padding:20px;
+    }
+    #desc h1{
+        font-size: 32px;
+    }
+
+    #desc p{
+        font-size:14px;
+        line-height: 25px;
+        padding:7px 20px;
+    }
+
+    #desc .btn{
+        margin:8px 13px;
+    }
+
+    #about img{
+        height:40%;
+    }
+}
+
+@media (max-width:900px){
+    #about img{
+        display:none;
+    }
+
+    #about{
+        justify-content: center;
+        align-items: center;
+    }
+
+    #desc{
+        height:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+}
+
+@media (max-width:674px){
+    /*HomePage*/
+    #Homepage h1{
+        font-size: 35px;
+    }
+    
+    #Homepage p{
+        font-size:12px;
+    }
+
+    #Homepage a{
+        padding:8px 6px;
+        font-size:smaller;
+    }
+
+    /*Services*/
+
+    #services h1{
+        font-size:25px;
+    }
+
+    #services h2{
+        font-size:14px;
+    }
+
+    #services #sbtn{
+        padding:8px 7px;
+    }
+
+    .card-header h2 button{
+        font-size: 12px;
+    }
+
+    .collapse .card-body{
+        font-size:10px;
+    }
+}
+
+@media (max-width:413px){
+    /*Navbar */
+    #logo{
+        font-size:23px;
+        padding-left: 10px;
+    }
+    /*HomePage*/
+    #Homepage h1{
+        font-size: 25px;
+    }
+    
+    #Homepage p{
+        font-size:11px;
+        padding:6px;
+    }
+
+    #desc p{
+        font-size:12px;
+        line-height: 23px;
+    }
+}
