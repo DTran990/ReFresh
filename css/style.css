@@ -7,7 +7,6 @@
     text-decoration: none;
 }
 
-
 body{
     font-family: 'Lato', sans-serif;
 }
@@ -121,6 +120,10 @@ nav ul li a{
 }
 
 #desc{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     width:50%;
     text-align:center;
     font-family:'Lato', sans-serif;
@@ -154,7 +157,7 @@ nav ul li a{
     flex-direction: column;
     text-align: center;
     width:100%;
-    min-height:100vh;
+    height:100vh;
     background:rgba(35,32,32);
     color:white;
     font-family: 'Lato', sans-serif;
@@ -209,7 +212,7 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width:100%;
+    min-width:100%;
     min-height:100vh;
     background:white;
     font-family: 'Lato', sans-serif;
@@ -245,6 +248,87 @@ nav ul li a{
     margin: 10px;
     border-radius: 10%;
     box-shadow: 5px 7px 15px -1px rgba(0, 0, 0, 0.336);
+}
+
+/*Contact Us Section */
+
+#contact{
+    display:flex;
+    align-items: center;
+    min-width:100%;
+    height:100vh;
+    background:white;
+    font-family: 'Lato', sans-serif; 
+}
+
+#contactinfo{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:50%;
+    height:100%;
+    background:rgba(35,32,32);
+    color:white;
+}
+
+#contactinfo h2{
+    font-size: 3.5rem;
+    padding:20px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #00E07B;
+}
+
+#contactinfo span i{
+    margin-right: 25px;
+}
+
+#contactf{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:50%;
+    height:100%;
+    color:rgba(35,32,32);
+    padding:25px;
+}
+
+#contactform{
+    line-height: 30px;
+    width:100%;
+    font-weight:bold; 
+    
+}
+
+#contactform .fields{
+    padding-left:10px;
+    text-align: left;
+    width:80%;
+    border:2px solid #00E07B;
+}
+
+#contactform .btn{
+    text-decoration: none;
+    color:black;
+    padding:10px 8px;
+    border:2px solid #00E07B;
+    margin:10px 20px;
+    border-radius: 15%;
+}
+
+
+
+@media (max-width:1107px){
+
+    /* Counsellors Section */
+
+    .counseldiv .dualcard .counsel img{
+        max-width:425px;
+        max-height:225px;
+    }
+
 }
 
 @media (max-width:1068px){
@@ -293,11 +377,15 @@ nav ul li a{
         left:0;
     }
 
-    /* Counsellors Section */
 
-    .counseldiv .dualcard .counsel img{
-        max-width:450px;
-        max-height:250px;
+    
+}
+
+@media (max-height:515px){
+    #contact-info h2{
+        padding:0;
+        padding-bottom: 15px;
+        
     }
 }
 
@@ -324,6 +412,17 @@ nav ul li a{
     #about img{
         height:40%;
     }
+
+    /*Contact-Us*/
+
+    #contactinfo h2{
+        font-size:2.5rem;
+    }
+
+    #contactinfo p{
+        margin: 15px;
+        font-size:14px;
+    }
 }
 
 @media (max-width:900px){
@@ -345,12 +444,55 @@ nav ul li a{
         padding: 10px;
     }
 
+    
 }
 
 @media (max-width:768px){
     .counseldiv .dualcard{
         flex-direction:column;
     }
+
+    /*Contact Us*/
+
+    #contact{
+        flex-direction: column;
+    }
+
+    #contactinfo, #contactf{
+        width:100%;
+        height:50%;
+    }
+
+    #contactform{
+        line-height: 26px;
+    }
+
+    #contactinfo h2{
+        padding:5px;
+        font-size:28px;
+    }
+
+    #contactinfo p{
+        margin:2px;
+    }
+
+    .fa-arrow-right{
+        display:none;
+    }
+
+    #contactform #message{
+        height:50px;
+    }
+    
+    #contactform label{
+        font-size:14px;
+        margin:0;
+    }
+
+    #contactform .btn{
+        padding: 5px;
+    }
+
 }
 
 @media (max-width:674px){
@@ -421,8 +563,8 @@ nav ul li a{
     }
 
     .counseldiv .dualcard .counsel img{
-        max-width:400px;
-        max-height:200px;
+        max-width:372px;
+        max-height:172px;
     }
 
     .counseldiv .dualcard .counsel h3{
@@ -432,4 +574,8 @@ nav ul li a{
     .counseldiv .dualcard .counsel p{
         font-size:12px;
     }
+
+    /*Contact Us */
+
+
 }
