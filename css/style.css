@@ -22,6 +22,7 @@ nav{
     height:80px;
     width:100%;
     position:fixed;
+    z-index: 5;
 }
 
 #logo{
@@ -166,8 +167,9 @@ nav ul li a{
 .servicesaccordian{
     width:85%;
     color:rgba(35,32,32);
-
+    box-shadow: 0px 2px 15px -1px rgba(255, 255, 255, 0.24);
 }
+
 #services #sbtn{
     text-decoration: none;
     color:white;
@@ -208,12 +210,42 @@ nav ul li a{
     align-items: center;
     flex-direction: column;
     width:100%;
-    height:100vh;
+    min-height:100vh;
     background:white;
     font-family: 'Lato', sans-serif;
     color:rgba(35,32,32);
 }
 
+#counsellors h1{
+    padding: 15px 0;
+}
+
+.counseldiv{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    min-height:80%;
+}
+
+.counseldiv .dualcard{
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+    height:100%;
+}
+
+.counseldiv .dualcard .counsel{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.counseldiv .dualcard .counsel img{
+    max-width:550px;
+    max-height:350px;
+    margin: 10px;
+    border-radius: 10%;
+    box-shadow: 5px 7px 15px -1px rgba(0, 0, 0, 0.336);
+}
 
 @media (max-width:1068px){
     /*Navbar */
@@ -234,7 +266,7 @@ nav ul li a{
         position:fixed;
         width:100%;
         height:100vh;
-        background: rgba(13,148,58);
+        background: rgba(35,32,32,0.8);
         top:80px;
         left:-100%;
         text-align:center;
@@ -259,6 +291,13 @@ nav ul li a{
 
     #check:checked ~ ul{
         left:0;
+    }
+
+    /* Counsellors Section */
+
+    .counseldiv .dualcard .counsel img{
+        max-width:450px;
+        max-height:250px;
     }
 }
 
@@ -306,6 +345,12 @@ nav ul li a{
         padding: 10px;
     }
 
+}
+
+@media (max-width:768px){
+    .counseldiv .dualcard{
+        flex-direction:column;
+    }
 }
 
 @media (max-width:674px){
@@ -365,5 +410,26 @@ nav ul li a{
     #desc p{
         font-size:12px;
         line-height: 23px;
+    }
+
+}
+
+@media (max-width: 375px){
+    
+    #counsellors h1{
+        font-size:25px;
+    }
+
+    .counseldiv .dualcard .counsel img{
+        max-width:400px;
+        max-height:200px;
+    }
+
+    .counseldiv .dualcard .counsel h3{
+        font-size: 20px;
+    }
+
+    .counseldiv .dualcard .counsel p{
+        font-size:12px;
     }
 }
