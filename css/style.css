@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Lato', sans-serif;
 }
@@ -17,11 +21,12 @@ span{
 
 /*Navbar */
 nav{
-    background:rgba(35,32,32,0.3);
+    background:transparent;
     height:80px;
     width:100%;
     position:fixed;
     z-index: 5;
+    transition: all 0.5s;
 }
 
 #logo{
@@ -52,6 +57,12 @@ nav ul li a{
     margin-right:20px;
 }
 
+.active{
+    color:white;
+    text-decoration: none;
+    border-bottom: 1px solid #00E07B;
+}
+
 .active, #navbtn:hover{
     color:white;
     text-decoration: none;
@@ -70,6 +81,11 @@ nav ul li a{
 
 #check{
     display:none;
+}
+
+.scrolling-active{
+    background:rgba(35,32,32);
+    transition: all 0.5s;
 }
 
 /*Homepage Section */
@@ -259,6 +275,7 @@ nav ul li a{
     height:100vh;
     background:white;
     font-family: 'Lato', sans-serif; 
+    border-top: 1px solid rgba(97, 96, 96, 0.288);
 }
 
 #contactinfo{
@@ -341,6 +358,15 @@ footer hr{
     margin:auto;
     margin-top: 25px;
     margin-bottom: 15px;
+}
+
+.socialmedia{
+    text-decoration: none;
+    color:white;
+}
+
+.socialmedia:hover{
+    color:#00E07B;
 }
 
 @media (max-width:1107px){
