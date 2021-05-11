@@ -318,7 +318,30 @@ nav ul li a{
     border-radius: 15%;
 }
 
+/* Footer */
 
+footer{
+    font-family: 'Lato', sans-serif;
+    color:white;
+    height:250px;
+    width:100%;
+    text-align: center;
+    background: rgba(35,32,32);
+    padding: 110px 0 35px 0;
+    border-top: 1px solid rgba(97, 96, 96, 0.288);
+}
+
+footer i{
+    padding: 0 15px;
+}
+
+footer hr{
+    border: 0.4px solid white;
+    width:90%;
+    margin:auto;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
 
 @media (max-width:1107px){
 
@@ -575,7 +598,14 @@ nav ul li a{
         font-size:12px;
     }
 
-    /*Contact Us */
+    /* Footer */
 
+    footer i{
+        padding: 0 8px;
+    }
+
+    footer p{
+        font-size:11px;
+    }
 
 }
