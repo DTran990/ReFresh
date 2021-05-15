@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    
+}
+
+span{
+    color:#00E07B;
+}
+
+/*Navbar */
+nav{
+    background:transparent;
+    height:80px;
+    width:100%;
+    position:fixed;
+    z-index: 5;
+    transition: all 0.5s;
+}
+
+#logo{
+    color:white;
+    font-size:35px;
+    line-height:80px;
+    padding: 0 100px;
+    font-weight:bold;
+    text-decoration: none;
+}
+
+nav ul{
+    float:right;
+}
+
+nav ul li{
+    display:inline-block;
+    line-height:80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color:white;
+    font-size:17px;
+    text-transform: uppercase;
+    padding:7px 13px;
+    text-decoration: none;
+    margin-right:20px;
+}
+
+.active{
+    color:white;
+    text-decoration: none;
+    border-bottom: 1px solid #00E07B;
+}
+
+.active, #navbtn:hover{
+    color:white;
+    text-decoration: none;
+    border-bottom: 1px solid #00E07B;
+}
+
+.checkbtn{
+    font-size:30px;
+    color:white;
+    float:right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display:none;
+}
+
+#check{
+    display:none;
+}
+
+.scrolling-active{
+    background:rgba(35,32,32);
+    transition: all 0.5s;
+}
+
+/*Homepage Section */
+
+#Homepage{
+    width:100%;
+    height:100vh;
+    background: url('../images/nature.jpg') no-repeat center center/cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+#Homepage h1{
+    font-size: 60px;
+}
+
+#Homepage p{
+    font-size:20px;
+}
+
+#Homepage .btn{
+    text-decoration: none;
+    color:white;
+    padding:10px 8px;
+    border:2px solid #00E07B;
+    border-radius: 15%;
+}
+
+.btn:hover{
+    background: rgba(0, 0, 0, 0.301);
+    transform: scale(1.05);
+    transition: all 0.2s;
+}
+
+/*About Section */
+
+#about{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#desc{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width:50%;
+    text-align:center;
+    font-family:'Lato', sans-serif;
+}
+
+#desc p{
+    padding:7px 100px;
+    line-height: 32px;
+}
+
+#about img{
+    width:45%;
+    height:50%;
+}
+
+#desc .btn{
+    text-decoration: none;
+    color:black;
+    padding:10px 8px;
+    border:2px solid #00E07B;
+    margin:10px 20px;
+    border-radius: 15%;
+}
+
+/*Services Section*/
+
+#services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width:100%;
+    min-height:100vh;
+    background:rgba(35,32,32);
+    color:white;
+    font-family: 'Lato', sans-serif;
+}
+
+#services h1{
+    margin: 25px;
+}
+
+.servicesaccordian{
+    width:85%;
+    color:rgba(35,32,32);
+    box-shadow: 0px 2px 15px -1px rgba(255, 255, 255, 0.24);
+}
+
+#services #sbtn{
+    text-decoration: none;
+    color:white;
+    padding:10px 8px;
+    border:2px solid #00E07B;
+    border-radius: 15%;
+    margin-bottom:40px;
+}
+
+#sbtn:hover{
+    background: rgba(0, 0, 0, 0.301);
+    transform: scale(1.05);
+    transition: all 0.2s;
+}
+
+.card-header h2 button{
+    text-decoration: none;
+    color:rgba(35,32,32);
+    font-weight: bold;
+}
+
+.card-header h2 button:hover{
+    background: none;
+    border:none;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+#services h2{
+    padding:14px;
+    font-size:16px;
+}
+
+/*Counsellors Section*/
+#counsellors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width:100%;
+    min-height:100vh;
+    background:white;
+    font-family: 'Lato', sans-serif;
+    color:rgba(35,32,32);
+}
+
+#counsellors h1{
+    padding: 15px 0;
+}
+
+.counseldiv{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    min-height:80%;
+}
+
+.counseldiv .dualcard{
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+    height:100%;
+}
+
+.counseldiv .dualcard .counsel{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.counseldiv .dualcard .counsel img{
+    max-width:550px;
+    max-height:350px;
+    margin: 10px;
+    border-radius: 10%;
+    box-shadow: 5px 7px 15px -1px rgba(0, 0, 0, 0.336);
+}
+
+/*Contact Us Section */
+
+#contact{
+    display:flex;
+    align-items: center;
+    min-width:100%;
+    height:100vh;
+    background:white;
+    font-family: 'Lato', sans-serif; 
+    border-top: 1px solid rgba(97, 96, 96, 0.288);
+}
+
+#contactinfo{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:50%;
+    height:100%;
+    background:rgba(35,32,32);
+    color:white;
+}
+
+#contactinfo h2{
+    font-size: 3.5rem;
+    padding:20px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #00E07B;
+}
+
+#contactinfo span i{
+    margin-right: 25px;
+}
+
+#contactf{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:50%;
+    height:100%;
+    color:rgba(35,32,32);
+    padding:25px;
+}
+
+#contactform{
+    line-height: 30px;
+    width:100%;
+    font-weight:bold; 
+    
+}
+
+#contactform .fields{
+    padding-left:10px;
+    text-align: left;
+    width:80%;
+    border:2px solid #00E07B;
+}
+
+#contactform .btn{
+    text-decoration: none;
+    color:black;
+    padding:10px 8px;
+    border:2px solid #00E07B;
+    margin:10px 20px;
+    border-radius: 15%;
+}
+
+/* Footer */
+
+footer{
+    font-family: 'Lato', sans-serif;
+    color:white;
+    height:250px;
+    width:100%;
+    text-align: center;
+    background: rgba(35,32,32);
+    padding: 110px 0 35px 0;
+    border-top: 1px solid rgba(97, 96, 96, 0.288);
+}
+
+footer i{
+    padding: 0 15px;
+}
+
+footer hr{
+    border: 0.4px solid white;
+    width:90%;
+    margin:auto;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.socialmedia{
+    text-decoration: none;
+    color:white;
+}
+
+.socialmedia:hover{
+    color:#00E07B;
+}
+
+@media (max-height:618px){
+    #about{
+        height:700px;
+    }
+
+    #contact{
+        height:700px;
+    }
+}
+
+@media (max-width:1107px){
+
+    /* Counsellors Section */
+
+    .counseldiv .dualcard .counsel img{
+        max-width:425px;
+        max-height:225px;
+    }
+
+}
+
+@media (max-width:1068px){
+    /*Navbar */
+    #logo{
+        font-size:30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a{
+        font-size:16px;
+    }
+
+    .checkbtn{
+        display:block;
+    }
+
+    ul{
+        position:fixed;
+        width:100%;
+        height:100vh;
+        background: rgba(35,32,32,0.8);
+        top:80px;
+        left:-100%;
+        text-align:center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display:block;
+        margin:50px 0;
+        line-height: 30px;
+    }
+
+    #navbtn{
+        font-size:20px;
+        color:white;
+    }
+
+    .active, #navbtn:hover{
+        color: white;
+        border-bottom: 1px solid #00E07B;
+    }
+
+    #check:checked ~ ul{
+        left:0;
+    }
+
+
+    
+}
+
+@media (max-height:515px){
+    #contact-info h2{
+        padding:0;
+        padding-bottom: 15px;
+        
+    }
+}
+
+@media (max-width:1040px){
+    #desc{
+        width:100%;
+        height:100%;
+        padding:20px;
+    }
+    #desc h1{
+        font-size: 32px;
+    }
+
+    #desc p{
+        font-size:14px;
+        line-height: 25px;
+        padding:7px 20px;
+    }
+
+    #desc .btn{
+        margin:8px 13px;
+    }
+
+    #about img{
+        height:40%;
+    }
+
+    /*Contact-Us*/
+
+    #contactinfo h2{
+        font-size:2.5rem;
+    }
+
+    #contactinfo p{
+        margin: 15px;
+        font-size:14px;
+    }
+}
+
+@media (max-width:900px){
+    #about img{
+        display:none;
+    }
+
+    #about{
+        justify-content: center;
+        align-items: center;
+    }
+
+    #desc{
+        height:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    
+}
+
+@media (max-width:768px){
+    .counseldiv .dualcard{
+        flex-direction:column;
+    }
+
+    /*Contact Us*/
+
+    #contact{
+        flex-direction: column;
+    }
+
+    #contactinfo, #contactf{
+        width:100%;
+        height:50%;
+    }
+
+    #contactform{
+        line-height: 26px;
+    }
+
+    #contactinfo h2{
+        padding:5px;
+        font-size:28px;
+    }
+
+    #contactinfo p{
+        margin:2px;
+    }
+
+    .fa-arrow-right{
+        display:none;
+    }
+
+    #contactform #message{
+        height:50px;
+    }
+    
+    #contactform label{
+        font-size:14px;
+        margin:0;
+    }
+
+    #contactform .btn{
+        padding: 5px;
+    }
+
+}
+
+@media (max-width:674px){
+    /*HomePage*/
+    #Homepage h1{
+        font-size: 35px;
+    }
+    
+    #Homepage p{
+        font-size:12px;
+    }
+
+    #Homepage a{
+        padding:8px 6px;
+        font-size:smaller;
+    }
+
+    /*Services*/
+
+    #services h1{
+        font-size:25px;
+    }
+
+    #services h2{
+        font-size:14px;
+    }
+
+    #services #sbtn{
+        padding:8px 7px;
+    }
+
+    .card-header h2 button{
+        font-size: 12px;
+    }
+
+    .collapse .card-body{
+        font-size:10px;
+    }
+}
+
+@media (max-width:413px){
+    /*Navbar */
+    #logo{
+        font-size:23px;
+        padding-left: 10px;
+    }
+    /*HomePage*/
+    #Homepage h1{
+        font-size: 25px;
+    }
+    
+    #Homepage p{
+        font-size:11px;
+        padding:6px;
+    }
+
+    #desc p{
+        font-size:12px;
+        line-height: 23px;
+    }
+
+}
+
+@media (max-width: 375px){
+    
+    #counsellors h1{
+        font-size:25px;
+    }
+
+    .counseldiv .dualcard .counsel img{
+        max-width:372px;
+        max-height:172px;
+    }
+
+    .counseldiv .dualcard .counsel h3{
+        font-size: 20px;
+    }
+
+    .counseldiv .dualcard .counsel p{
+        font-size:12px;
+    }
+
+    /* Footer */
+
+    footer i{
+        padding: 0 8px;
+    }
+
+    footer p{
+        font-size:11px;
+    }
+
+}
+
+@media (max-width: 284px){
+    .counseldiv .dualcard .counsel img{
+        width:50%;
+        height:15%;
+    }
+}
